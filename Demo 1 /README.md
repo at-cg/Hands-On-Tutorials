@@ -41,6 +41,7 @@ cd ..
 wget -O sars-cov-2_genomes_index.fmd https://zenodo.org/records/4771285/files/sars-cov-2.fmd?download=1
 
 # How big is the index file?
+du -sh sars-cov-2_genomes_index.fmd 
 ```
 
 ## Using Index
@@ -63,4 +64,18 @@ Can we recover genome sequences back from the index?
 ```
 
 ### Pattern matching using index
+```
+# Use one of the genomes as query
+./ropebwt3/ropebwt3 get sars-cov-2_genomes_index.fmd 1 > genome1.fa
+./ropebwt3/ropebwt3 mem sars-cov-2_genomes_index.fmd genome1.fa
 
+# How many hits?
+```
+Next, download a custom DNA sequence associated with spike gene of a SARS-CoV-2 strain from [here](https://www.ncbi.nlm.nih.gov/gene/43740568) and repeat the above search.
+
+# Search the downloaded gene sequence
+./ropebwt3/ropebwt3 mem sars-cov-2_genomes_index.fmd gene.fna
+
+# How many hits?
+# How fast is the search?
+```
