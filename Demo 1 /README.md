@@ -72,7 +72,7 @@ Can we recover genome sequences back from the index?
 # How many hits?
 ```
 Next, download a custom DNA sequence associated with spike gene of a SARS-CoV-2 strain from [here](https://www.ncbi.nlm.nih.gov/gene/43740568) and repeat the above search.
-
+```
 # Search the downloaded gene sequence
 ./ropebwt3/ropebwt3 mem sars-cov-2_genomes_index.fmd gene.fna
 
