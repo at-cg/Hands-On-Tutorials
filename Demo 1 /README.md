@@ -34,7 +34,7 @@ make
 
 ## Downloading index
 
-Next, we will come back to the directory where we had downloaded the dataset. Building a compressed index for 400K genomes may take significant time on a laptop (you are welcome to try at home). For now we will directly download the index from [Zenodo](https://zenodo.org/records/4771285).
+Building a compressed index for 400K genomes may take significant time on a laptop (you are welcome to try at home). For now we will directly download the index from [Zenodo](https://zenodo.org/records/4771285).
 ```
 cd ..
 # Download index
