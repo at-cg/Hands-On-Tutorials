@@ -2,7 +2,7 @@
 
 This demo has been adapted from [Heng Li's blog](https://lh3.github.io/2021/05/17/an-fm-index-of-400k-sars-cov-2-genomes)
 
-[Summary statistics from across the COVID-19 Data Portal](https://www.covid19dataportal.org/statistics)
+[Statistics from the COVID-19 Data Portal](https://www.covid19dataportal.org/statistics)
 
 ## You will need
 - Internet connectivity
