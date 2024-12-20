@@ -5,7 +5,7 @@ This demo has been adapted from [Heng Li's blog](https://lh3.github.io/2021/05/1
 How many SARS-CoV-2 sequences are available at the COVID-19 Data Portal?
 [See statistics here](https://www.covid19dataportal.org/statistics)
 
-## You will need
+## For this demo, you will need:
 - Internet connectivity
 - Laptop with Linux OS
 - Knowledge of basic linux commands
