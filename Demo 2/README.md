@@ -28,6 +28,6 @@ rm sub.tar.gz
 
 ## Map reads on a reference genome
 
-## Inspection of a BAM file
+## Inspection of BAM file
 
 ## Visualization using a Genome Browser
