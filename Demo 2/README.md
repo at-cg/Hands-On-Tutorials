@@ -52,7 +52,7 @@ We will need one more tool called [Samtools](https://anaconda.org/bioconda/samto
 ```
 # In the following commands, give the complete path to samtools where you installed it
 samtools view -hSbo alignments.bam alignments.sam
-samtools sort alignments.bam alignments.sorted.bam
+samtools sort alignments.bam > alignments.sorted.bam
 samtools index alignments.sorted.bam
 ```
 
