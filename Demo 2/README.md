@@ -1,9 +1,9 @@
-# Application of Burrows Wheeler Index: Genome resequencing and visualization
+# Application of Burrows Wheeler Index: Genome resequencing
 
 ## Background
-[How do sequencing instruments read DNA]{https://nanoporetech.com/platform/technology}
-[Mutations in a human genome](https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genomic-variation)
-[Genome resequencing](https://training.galaxyproject.org/training-material/topics/sequence-analysis/images/mapping/mapping.png)
+- [How do sequencing instruments read DNA](https://nanoporetech.com/platform/technology)
+- [Mutations in a human genome](https://www.genome.gov/about-genomics/educational-resources/fact-sheets/human-genomic-variation)
+- [Genome resequencing](https://training.galaxyproject.org/training-material/topics/sequence-analysis/images/mapping/mapping.png)
 
 ## Install and Prepare BWA
 Let us install an alignment tool, `BWA`. `BWA` stands for Burrows-Wheeler Aligner. It aligns the given set of reads (from the target genome) to the given reference genome.
