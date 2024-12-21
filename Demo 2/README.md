@@ -21,10 +21,13 @@ Now that we have installed BWA, we need to download a reference genome and a set
 ```
 # Come back to the tutorial-bwa folder and use the following commands
 curl -L -o ecoli_rel606_reference.fasta.gz ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/017/985/GCA_000017985.1_ASM1798v1/GCA_000017985.1_ASM1798v1_genomic.fna.gz
-curl -L -o sub.tar.gz https://ndownloader.figshare.com/files/14418248
-tar xvf sub.tar.gz
-mv sub/ data/trimmed_fastq_small
-rm sub.tar.gz
+curl -L -o reads.tar.gz https://ndownloader.figshare.com/files/14418248
+tar xvf reads.tar.gz
+mv sub/SRR2584866*
+
+# Using the above commands, you should have the following files:
+# Reference genome: ecoli_rel606_reference.fasta.gz
+# Sequencing reads: SRR2584866_1.trim.sub.fastq and SRR2584866_2.trim.sub.fastq
 ```
 
 ## Map reads on a reference genome
