@@ -35,14 +35,14 @@ rm -rf sub reads.tar.gz # we can delete other files
 ```
 # Assuming you are inside the tutorial-bwa folder
 # Build Burrows Wheeler index of the reference genome
-bwa index ecoli_rel606_reference.fasta.gz
+./bwa/bwa index ecoli_rel606_reference.fasta.gz
 
 # Align reads
-bwa mem ecoli_rel606_reference.fasta.gz SRR2584866_1.trim.sub.fastq SRR2584866_2.trim.sub.fastq > alignments.sam
+./bwa/bwa mem ecoli_rel606_reference.fasta.gz SRR2584866_1.trim.sub.fastq SRR2584866_2.trim.sub.fastq > alignments.sam
 ```
 
 ## Inspection of SAM file
-SAM file contains information about each read's alignment to the reference genome. Let us open and check this file. Here is a [summary image](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg) that conveys what all columns mean. 
+The SAM file contains information about each read's alignment to the reference genome. Let us open and check `alignments.sam`. Here is a [summary image](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg) that conveys what all the columns in this file mean. 
 
 ## Visualization using a Genome Browser
 Using [IGV](https://igv.org), we can also visualize the alignment file. This allows us to visually inspect read alignments. We will need to reformat the `alignments.sam` to binary format and sort the read alignments based on their alignment positions before we can upload the file to IGV.
@@ -50,11 +50,12 @@ Using [IGV](https://igv.org), we can also visualize the alignment file. This all
 We will need one more tool called [Samtools](https://anaconda.org/bioconda/samtools) for this. One can install Samtools from [source](https://github.com/samtools/samtools#building-samtools) or by using package managers such as [conda](https://anaconda.org/bioconda/samtools).
 
 ```
+# In the following commands, give the complete path to samtools where you installed it
 samtools view -hSbo alignments.bam alignments.sam
 samtools sort alignments.bam alignments.sorted.bam
-samtools index alignments.bam
+samtools index alignments.sorted.bam
 ```
 
-Now, we have all the files that we need for alignment visualization using IGV. First upload the reference genome using `Genome` -> `Local File` upload option. Next, upload `alignments.sorted.bam` using `Tracks` -> `Local File`. 
+Now, we have all the files that we need for alignment visualization using IGV. First uncompress the reference genome `ecoli_rel606_reference.fasta.gz` and upload it using `Genome` -> `Local File` upload option. Next, upload `alignments.sorted.bam` using `Tracks` -> `Local File`. 
 
-Finally, in the search textbox, type any coordinate range that you wish to visually inspect.
+Finally, in the search textbox, type any coordinate range that you wish to visually inspect. Zoom in to any region, say `CP000819.1:1736399-1737202`, which implies that you wish to inspect alignments in the interval `1736399-1737202` on the reference genome. What all do you see?
