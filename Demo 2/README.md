@@ -42,7 +42,7 @@ rm -rf sub reads.tar.gz # we can delete other files
 ```
 
 ## Inspection of SAM file
-The SAM file contains information about each read's alignment to the reference genome. Let us open and check `alignments.sam`. Here is a [summary image](https://www.samformat.info/images/sam_format_annotated_example.5108a0cd.jpg) that conveys what all the columns in this file mean. 
+The SAM file contains information about each read's alignment to the reference genome. Let us open and check `alignments.sam`. Here is a [summary image](http://zyxue.github.io/2017/09/26/sam-format-example.html) that conveys what all the columns in this file mean. 
 
 ## Visualization using a Genome Browser
 Using [IGV](https://igv.org), we can also visualize the alignment file. This allows us to visually inspect read alignments. We will need to reformat the `alignments.sam` to binary format and sort the read alignments based on their alignment positions before we can upload the file to IGV.
