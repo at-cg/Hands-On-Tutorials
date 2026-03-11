@@ -20,14 +20,14 @@ Now that we have installed BWA, we need to download a reference genome and a set
 
 ```
 # Come back to the tutorial-bwa folder and use the following commands
-curl -L -o ecoli_rel606_reference.fasta.gz ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/017/985/GCA_000017985.1_ASM1798v1/GCA_000017985.1_ASM1798v1_genomic.fna.gz
+wget ftp://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/017/985/GCA_000017985.1_ASM1798v1/GCA_000017985.1_ASM1798v1_genomic.fna.gz
 curl -L -o reads.tar.gz https://ndownloader.figshare.com/files/14418248
 tar xvf reads.tar.gz
 mv sub/SRR2584866* .
 rm -rf sub reads.tar.gz # we can delete other files
 
 # After using the above commands, you should have the following files:
-# Reference genome: ecoli_rel606_reference.fasta.gz
+# Reference genome: GCA_000017985.1_ASM1798v1_genomic.fna.gz
 # Sequencing reads: SRR2584866_1.trim.sub.fastq and SRR2584866_2.trim.sub.fastq
 ```
 
@@ -35,10 +35,10 @@ rm -rf sub reads.tar.gz # we can delete other files
 ```
 # Assuming you are inside the tutorial-bwa folder
 # Build Burrows Wheeler index of the reference genome
-./bwa/bwa index ecoli_rel606_reference.fasta.gz
+./bwa/bwa index GCA_000017985.1_ASM1798v1_genomic.fna.gz
 
 # Align reads
-./bwa/bwa mem ecoli_rel606_reference.fasta.gz SRR2584866_1.trim.sub.fastq SRR2584866_2.trim.sub.fastq > alignments.sam
+./bwa/bwa mem GCA_000017985.1_ASM1798v1_genomic.fna.gz SRR2584866_1.trim.sub.fastq SRR2584866_2.trim.sub.fastq > alignments.sam
 ```
 
 ## Inspection of SAM file
