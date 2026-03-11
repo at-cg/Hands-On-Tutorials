@@ -56,6 +56,6 @@ samtools sort alignments.bam > alignments.sorted.bam
 samtools index alignments.sorted.bam
 ```
 
-Now, we have all the files that we need for alignment visualization using IGV. First uncompress the reference genome `ecoli_rel606_reference.fasta.gz` and upload it using `Genome` -> `Local File` upload option. Next, upload `alignments.sorted.bam` using `Tracks` -> `Local File`. 
+Now, we have all the files that we need for alignment visualization using IGV. First uncompress the reference genome `GCA_000017985.1_ASM1798v1_genomic.fna.gz` and upload it using `Genome` -> `Local File` upload option. Next, upload `alignments.sorted.bam` using `Tracks` -> `Local File`. 
 
 Finally, in the search textbox, type any coordinate range that you wish to visually inspect. Zoom in to any region, say `CP000819.1:1736399-1737202`, which implies that you wish to inspect alignments in the interval `1736399-1737202` on the reference genome. What all do you see?
